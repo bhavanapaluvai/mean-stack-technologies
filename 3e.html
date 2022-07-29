@@ -1,0 +1,70 @@
+//Write a JavaScript code to book movie tickets online and calculate the total price
+based on the 3 conditions: (a) If seats to be booked are not more than 2, the cost per
+ticket remains Rs. 150. (b) If seats are 6 or more, booking is not allowed. (c) If seat is booked with other then give a discount with 5%.
+
+// using loops
+<html>
+<head>
+<script>
+var tot,ntic,discount,i;
+const tic_prize=150;
+    ntic=parseInt(window.prompt("Enter no of tickets:"+ntic));
+    document.write("Entering no of tickets to book:"+ntic+"<br>");
+
+    if(ntic>=6 || ntic<=0)
+         alert("Booking is not Possible");
+    else if(ntic>=1 && ntic<=2)
+    {
+         tot=tic_prize*ntic;
+        document.write("<h2 style='color:yellow'>");
+        document.write("enter total cost:"+tot+"<br>");
+        document.write("</h2>");
+    }
+    //var start,end;
+    //start=parseInt(window.prompt("Enter no of tickets:"+start));
+    //end=parseInt(window.prompt("Enter no of tickets:"+end));
+    else 
+   {
+      for(ntic=3;ntic<6;ntic++)
+     {
+    
+         tot=tic_prize*ntic;
+        document.write("<table border=1>");
+         document.write("<tr>");
+        document.write("<th style='color:green'>" ); 
+        document.write("total tickets")
+          document.write("</th>");
+          document.write("<th>"); 
+          document.write(ntic); 
+        document.write("</th>");
+         document.write("</tr>"); 
+        document.write("<tr>");
+        document.write("<th>" ); 
+        document.write("total")
+          document.write("</th>");
+          document.write("<th>"); 
+          document.write(tot); 
+        document.write("</th>");
+         document.write("</tr>"); 
+         discount=tot*0.05;
+         document.write("<th style='color:violet'>");
+         document.write("discount");
+           document.write("</th>");
+           document.write("<th>"); 
+            document.write(discount);
+         document.write("</th>");
+        document.write("</tr>"); 
+         var amount=tot-discount;
+         document.write("<th style='color:red'>");
+         document.write("Amount to pay");
+         document.write("</th>");
+         document.write("<th>");
+         document.write(amount);
+         document.write("</th>");
+          document.write("</tr>"); 
+        document.write("</table>"); 
+    }
+  }
+</script>
+</head>
+</html>
