@@ -1,0 +1,39 @@
+<html>
+<head>
+<script>
+days=["sunday","monday","tuesday","wednesday","thursday","friday","saturday","sunday"];
+months=["jan","feb","mar","apr","may","jun","july","aug","sep","oct","nov","dec"];
+document.write("<h2 style='color:blue'>");
+var d=new Date();
+document.write(d);
+document.write("</h2>");
+document.write("<br>");
+var day=d.getDay();
+document.write("<h2 style='color:green'>");
+document.write("Day is "+day+ " is "+days[day]);
+document.write("</h2>");
+document.write("<br>");
+var mon=d.getMonth();
+document.write("<h2 style='color:red'>");
+document.write("Month is " +mon+ " is "+months[mon]);
+document.write("</h2>");
+document.write("<br>");
+var year=d.getFullYear();
+document.write("<h2 style='color:violet'>");
+document.write("year is "+year);
+document.write("</h2>");
+document.write("<br>");
+var time=d.getTime();
+document.write("<h2 style='color:orange'>");
+document.write("time in milliseconds: "+time);
+document.write("time in Hours: "+d.getHours());
+document.write("time in minutes: "+d.getMinutes());
+document.write("time in seconds: "+d.getSeconds());
+document.write("<br>");
+document.write("present time: "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds());
+document.write("</h2>");
+
+
+</script>
+</head>
+</html>
