@@ -1,0 +1,20 @@
+<html>
+<body>
+<h2 id="demo"></h2>
+<h1 id="demo1"></h1>
+<script>
+function f1()
+{
+  document.getElementById("demo").innerHTML = ("Addition of x and y is:" );
+}
+function add(x,y,callback)
+{
+  document.getElementById("demo1").innerHTML = (x+y);
+  callback();
+}
+setTimeout(f1,3000);
+setTimeout(add,5000,3,89);
+setInterval(add,2000,7,87);
+</script>
+</body>
+</html>
